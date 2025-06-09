@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/progreso.js"></script>
+  <title>formulario </title>
+</head>
+<body>
+<article>
+  <header>
+    <h1>💖 FORMULARIO 🎀 </h1>
+    <p class="extra">Por favor completa el siguiente formulario para registrarte📝 </p>
+  </header>
+<!-- ...datos... -->
+  <form id="formEvento">
+   <fieldset>
+  <legend>Datos personales 📍</legend>
+  <label for="nombre">Nombre completo:</label>
+  <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="pais">País:</label>
+  <input list="paises" name="pais" id="pais" />
+  <datalist id="paises">
+    <option value="Colombia">
+    <option value="México">
+    <option value="Argentina">
+    <option value="España">
+  </datalist>
+
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" name="edad" required placeholder="Tu edad" min="1" max="120" />
+</fieldset>
+    <fieldset>
+      <legend>experiencia en programacion 🧑‍💻
+</legend>
+      <label for="tema">experiencia:</label>
+      <select name="tema" id="tema" required>
+        
+          <option value="principiante">principiante</option>
+          <option value="intermedio">intermedio</option>
+          <option value="avanzado">avanzado</option>
+      </select>
+      <label for="comentarios">comentarios adicionales </label>
+      <textarea id="comentarios" name="comentarios" rows="4">
+      </textarea>
+    </fieldset>
+    <!-- ...terminos y condiciones ... -->
+<details>
+  <summary>📄 Ver términos y condiciones</summary>
+  <ul>
+    <li>Al registrarte, aceptas recibir notificaciones sobre el evento.</li>
+    <li>Tus datos están protegidos bajo la ley de protección de datos personales.</li>
+    <li>Puedes solicitar la eliminación de tus datos en cualquier momento.</li>
+  </ul>
+</details>
+<div>
+  <input type="checkbox" id="acepto" name="acepto" required>
+  <label for="acepto">Acepto los términos y condiciones</label>
+</div>
+    <!-- ...código existente... -->
+<fieldset>
+  <legend>Progreso de inscripción 👁️👄👁️</legend>
+  <p>Estado actual del formulario:</p>
+  <progress id="barraProgreso" value="0" max="100"></progress>
+</fieldset>
+<!-- ...boton de enviar formulario... -->
+<button type="submit">Enviar FORMULARIO</button>
+<output id="resultado"></output>
+</form>
+</article>
+</body>
+</html>
